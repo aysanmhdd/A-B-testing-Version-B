@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F59XF95P6S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-F59XF95P6S');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دوره اتوماسیون تست نرم‌افزار | Version B</title>
@@ -65,23 +74,31 @@
     </section>
 
     <footer>
-        <p>© 2025 -   A/B Testing | Version B</p>
+        <p>© 2025 - A/B Testing | Version B</p>
     </footer>
 
     <script>
-        // ساده countdown (برای دمو)
-        let time = 72 * 3600; // 3 روز
+        // Countdown ساده
+        let time = 72 * 3600 + 12 * 60; // ۳ روز و ۱۲ ساعت
         setInterval(() => {
             if (time > 0) {
                 time -= 60;
-                const h = Math.floor(time / 3600);
-                const m = Math.floor((time % 3600) / 60);
-                document.getElementById('timer').textContent = `${Math.floor(h/24)} روز ${h%24} ساعت ${m} دقیقه`;
+                const days = Math.floor(time / (3600 * 24));
+                const hours = Math.floor((time % (3600 * 24)) / 3600);
+                const minutes = Math.floor((time % 3600) / 60);
+                document.getElementById('timer').textContent = `${days} روز ${hours} ساعت ${minutes} دقیقه`;
             }
         }, 60000);
 
+        // کلیک دکمه CTA - یک listener واحد با track در GA4
         document.getElementById('cta').addEventListener('click', () => {
-            alert('تبریک! Conversion موفق در Version B 🚀');
+            // ارسال event به GA4
+            gtag('event', 'cta_click', {
+                'version': 'B',
+                'event_label': 'کلیک ثبت‌نام - نسخه B'
+            });
+
+            alert('تبریک! ثبت‌نام موفق در Version B 🚀');
             console.log('CTA Clicked - Version B');
         });
     </script>
