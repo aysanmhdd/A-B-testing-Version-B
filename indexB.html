@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دوره اتوماسیون تست نرم‌افزار | Version B</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root { --primary: #16a34a; --secondary: #1e40af; --text: #1e293b; --bg: #f8fafc; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Vazirmatn', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+        header { min-height: 100vh; background: linear-gradient(135deg, rgba(30,64,175,0.9), rgba(22,163,74,0.8)), url('https://source.unsplash.com/random/1600x900/?coding,qa'); background-size: cover; display: flex; align-items: center; color: white; }
+        .hero { text-align: center; animation: fadeIn 1.5s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+        h1 { font-size: 3.5rem; font-weight: 900; margin-bottom: 24px; }
+        .subtitle { font-size: 2rem; margin-bottom: 32px; }
+        .countdown { font-size: 1.6rem; background: rgba(0,0,0,0.5); padding: 15px 30px; border-radius: 50px; margin: 20px 0; }
+        .cta-button { background: var(--primary); padding: 20px 60px; font-size: 1.8rem; border-radius: 9999px; box-shadow: 0 20px 40px rgba(22,163,74,0.4); transition: all 0.4s; }
+        .cta-button:hover { transform: scale(1.1); box-shadow: 0 30px 60px rgba(22,163,74,0.6); }
+        .social-proof { margin: 40px 0; font-size: 1.6rem; font-weight: bold; }
+        section { padding: 120px 0; }
+        .benefits .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .card { background: white; padding: 50px; border-radius: 24px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.08); transition: transform 0.4s; }
+        .card:hover { transform: translateY(-15px); }
+        .card i { font-size: 4rem; color: var(--primary); margin-bottom: 30px; }
+        .testimonials .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        .testimonial { background: white; padding: 40px; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .testimonial img { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 20px; }
+        footer { background: #1e293b; color: white; text-align: center; padding: 80px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container hero">
+            <h1>می‌خوای در ۳ ماه در تست نرم افزار حرفه‌ای بشی؟</h1>
+            <p class="subtitle">تخفیف ویژه فقط تا پایان این هفته!</p>
+            <div class="countdown" id="countdown">زمان باقی‌مانده: <span id="timer">۳ روز ۱۲ ساعت</span></div>
+            <button class="cta-button" id="cta">همین حالا ثبت‌نام کن</button>
+            <div class="social-proof">۱۰,۰۰۰+ دانشجو | امتیاز ۴.۹ ⭐ | ۹۵% رضایت</div>
+        </div>
+    </header>
+
+    <section class="benefits">
+        <div class="container">
+            <h2 style="text-align:center; font-size:3rem; margin-bottom:80px;">مزایای منحصر به فرد این دوره</h2>
+            <div class="grid">
+                <div class="card"><i class="fas fa-lightning-bolt"></i><h3>یادگیری سریع</h3><p>از مبتدی به پیشرفته در ۱۲ هفته</p></div>
+                <div class="card"><i class="fas fa-shield-alt"></i><h3>گواهی معتبر</h3><p>برای لینکدین و رزومه</p></div>
+                <div class="card"><i class="fas fa-headset"></i><h3>پشتیبانی ۲۴/۷</h3><p>گروه تلگرام و منتورینگ</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" style="background:#eef2ff;">
+        <div class="container">
+            <h2 style="text-align:center; font-size:3rem; margin-bottom:80px;">دانشجویان موفق ما</h2>
+            <div class="grid">
+                <div class="testimonial"><img src="https://randomuser.me/api/portraits/men/45.jpg" alt="دانشجو"><p>"درآمد دو برابری بعد از دوره!"</p><strong>– رضا، QA Lead</strong></div>
+                <div class="testimonial"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="دانشجو"><p>"بهترین سرمایه‌گذاری عمرم بود."</p><strong>– سارا، اتوماسیون تست‌کننده</strong></div>
+                <div class="testimonial"><img src="https://randomuser.me/api/portraits/men/78.jpg" alt="دانشجو"><p>"حالا در گوگل کار می‌کنم!"</p><strong>– محمد، مهندس نرم‌افزار</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 -   A/B Testing | Version B</p>
+    </footer>
+
+    <script>
+        // ساده countdown (برای دمو)
+        let time = 72 * 3600; // 3 روز
+        setInterval(() => {
+            if (time > 0) {
+                time -= 60;
+                const h = Math.floor(time / 3600);
+                const m = Math.floor((time % 3600) / 60);
+                document.getElementById('timer').textContent = `${Math.floor(h/24)} روز ${h%24} ساعت ${m} دقیقه`;
+            }
+        }, 60000);
+
+        document.getElementById('cta').addEventListener('click', () => {
+            alert('تبریک! Conversion موفق در Version B 🚀');
+            console.log('CTA Clicked - Version B');
+        });
+    </script>
+</body>
+</html>
