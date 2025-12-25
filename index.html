@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag  -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZLC003Q15"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -78,7 +78,6 @@
     </footer>
 
     <script>
-        // Countdown ساده
         let time = 72 * 3600 + 12 * 60; // ۳ روز و ۱۲ ساعت
         setInterval(() => {
             if (time > 0) {
@@ -90,7 +89,6 @@
             }
         }, 60000);
 
-        // کلیک دکمه CTA - یک listener واحد با track در GA4
         document.getElementById('cta').addEventListener('click', () => {
             // ارسال event به GA4
             gtag('event', 'cta_click', {
@@ -104,5 +102,6 @@
     </script>
 </body>
 </html>
+
 
 
